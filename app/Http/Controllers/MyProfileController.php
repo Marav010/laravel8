@@ -62,16 +62,16 @@ class MyProfileController extends Controller
         $god = "https://www.blackoutx.com/wp-content/uploads/2021/04/Thor.jpg";
         $spider = "https://icdn5.digitaltrends.com/image/spiderman-far-from-home-poster-2-720x720.jpg";
 
-        return view("newgallery/gallery", compact("ant", "bird", "cat", "god", "spider"));
+        return view("test/index", compact("ant", "bird", "cat", "god", "spider"));
     }
     public function ant()
     {
         $ant = "https://cdn3.movieweb.com/i/article/Oi0Q2edcVVhs4p1UivwyyseezFkHsq/1107:50/Ant-Man-3-Talks-Michael-Douglas-Update.jpg";
-        return view("newgallery/ant", compact("ant"));
+        return view("test/ant", compact("ant"));
     }
     public function bird()
     {
         $bird = "https://cdn.vox-cdn.com/thumbor/n1ad23hZrumsQ8gdXQ3yAyPYn8U=/0x0:1400x787/1200x800/filters:focal(405x89:629x313)/cdn.vox-cdn.com/uploads/chorus_image/image/63686080/lag0835_v074.1004_wide_6038893c740ea664a676ebc5d8160b22c02ad616.0.jpg";
-        return view("newgallery/bird", compact("bird"));
+        return view("test/bird", compact("bird"));
     }
 }
