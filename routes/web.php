@@ -139,3 +139,15 @@ Route::get("/newgallery/ant", [MyProfileController::class, "ant"]);
 Route::get("/newgallery/bird", [MyProfileController::class, "bird"]);
 
 Route::get('/covid19', [ Covid19Controller::class,"index" ]);
+
+Route::get("/covid19/create",[ Covid19Controller::class ,"create"]);
+
+Route::post("/covid19",[ Covid19Controller::class , "store" ]);
+
+Route::get('/covid19/{id}',[ Covid19Controller::class,'show']);
+
+Route::get("/covid19/{id}/edit", [ Covid19Controller::class ,"edit"]);
+
+Route::patch("/covid19/{id}", [ Covid19Controller::class , "update" ]);
+
+Route::delete('/covid19/{id}', [ Covid19Controller::class , 'destroy' ]);
