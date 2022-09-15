@@ -171,15 +171,3 @@ Route::delete('/staff/{id}', [StaffController::class, 'destroy']);
 
 Route::resource('post', PostController::class);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__ . '/auth.php';
-
-Route::middleware(['auth', 'role:admin'])->group(function () {
-    Route::get('/teacher', function () {
-        return view('teacher/index');
-    });
-    });
-    
